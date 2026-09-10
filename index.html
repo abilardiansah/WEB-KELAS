@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website Kelas</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f1f5f9;
+      color: #1e293b;
+    }
+
+    header {
+      background: linear-gradient(135deg, #2563eb, #06b6d4);
+      color: white;
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    header h1 {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 17px;
+    }
+
+    nav {
+      background: white;
+      padding: 15px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      box-shadow: 0 2px 10px #0002;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #2563eb;
+      font-weight: bold;
+      margin: 0 10px;
+    }
+
+    section {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 25px;
+      border-radius: 18px;
+      margin-bottom: 20px;
+      box-shadow: 0 5px 20px #0001;
+    }
+
+    h2 {
+      color: #2563eb;
+      margin-bottom: 15px;
+    }
+
+    ul {
+      padding-left: 20px;
+      line-height: 2;
+    }
+
+    .anggota {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+      gap: 12px;
+    }
+
+    .siswa {
+      background: #eff6ff;
+      padding: 15px;
+      border-radius: 12px;
+      text-align: center;
+    }
+
+    footer {
+      background: #0f172a;
+      color: white;
+      text-align: center;
+      padding: 25px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>XI RPL</h1>
+    <p>SMK PLUS MIFTAHUL IHSAN CILOGRANG</p>
+    <p>✨ Bersama Kita Bisa ✨</p>
+  </header>
+
+  <nav>
+    <a href="#tentang">Tentang</a>
+    <a href="#anggota">Anggota</a>
+    <a href="#jadwal">Jadwal</a>
+  </nav>
+
+  <section id="tentang">
+    <div class="card">
+      <h2>👋 Tentang Kelas</h2>
+      <p>
+        Selamat datang di website resmi kelas XI RPL.
+        Website ini dibuat sebagai tempat informasi,
+        dokumentasi, dan kenangan kelas kami.
+      </p>
+    </div>
+  </section>
+
+  <section id="anggota">
+    <div class="card">
+      <h2>👥 Anggota Kelas</h2>
+
+      <div class="anggota">
+        <div class="siswa">Siswa 1</div>
+        <div class="siswa">Siswa 2</div>
+        <div class="siswa">Siswa 3</div>
+        <div class="siswa">Siswa 4</div>
+        <div class="siswa">Siswa 5</div>
+        <div class="siswa">Siswa 6</div>
+      </div>
+
+      <p style="margin-top:15px;">
+        *Nama siswa bisa kita ganti nanti.
+      </p>
+    </div>
+  </section>
+
+  <section id="jadwal">
+    <div class="card">
+      <h2>📚 Jadwal Pelajaran</h2>
+
+      <ul>
+        <li>Senin — Pemrograman</li>
+        <li>Selasa — Bahasa Indonesia</li>
+        <li>Rabu — Matematika</li>
+        <li>Kamis — Bahasa Inggris</li>
+        <li>Jumat — Produktif RPL</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <div class="card">
+      <h2>📢 Pengumuman</h2>
+      <p>
+        Selamat datang di website kelas kami!
+        Jangan lupa tetap kompak dan semangat belajar.
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 XI RPL</p>
+    <p>SMK PLUS MIFTAHUL IHSAN CILOGRANG</p>
+  </footer>
+
+</body>
+  </html>
