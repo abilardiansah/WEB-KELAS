@@ -3,171 +3,350 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Website Kelas</title>
+
+  <title>KELAS X TSM</title>
 
   <style>
     * {
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      font-family: Arial, sans-serif;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
     }
 
     body {
-      background: #f1f5f9;
-      color: #1e293b;
-    }
-
-    header {
-      background: linear-gradient(135deg, #2563eb, #06b6d4);
+      font-family: Arial, sans-serif;
+      background: #101827;
       color: white;
-      text-align: center;
-      padding: 60px 20px;
     }
 
-    header h1 {
-      font-size: 40px;
-      margin-bottom: 10px;
-    }
-
-    header p {
-      font-size: 17px;
-    }
-
+    /* NAVBAR */
     nav {
-      background: white;
-      padding: 15px;
-      text-align: center;
-      position: sticky;
+      position: fixed;
       top: 0;
-      box-shadow: 0 2px 10px #0002;
+      width: 100%;
+      padding: 18px 5%;
+      background: rgba(10, 15, 30, 0.92);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 100;
+      border-bottom: 1px solid rgba(255,255,255,0.15);
     }
 
-    nav a {
-      text-decoration: none;
-      color: #2563eb;
+    .logo {
+      font-size: 24px;
       font-weight: bold;
-      margin: 0 10px;
+      color: #38bdf8;
     }
 
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 20px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    nav ul li a:hover {
+      color: #38bdf8;
+    }
+
+    /* HERO */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+
+      /* FOTO KELAS */
+      background:
+        linear-gradient(rgba(5,10,25,0.45), rgba(5,10,25,0.75)),
+        url("foto-kelas.jpg");
+
+      background-size: cover;
+      background-position: center;
+    }
+
+    .hero-content {
+      padding: 20px;
+    }
+
+    .hero h1 {
+      font-size: 70px;
+      font-weight: 900;
+      text-shadow: 3px 3px 10px black;
+    }
+
+    .hero h2 {
+      font-size: 55px;
+      color: #38bdf8;
+      margin-top: -10px;
+      font-weight: 900;
+      text-shadow: 3px 3px 10px black;
+    }
+
+    .hero p {
+      margin-top: 20px;
+      font-size: 20px;
+      font-weight: bold;
+      text-shadow: 2px 2px 5px black;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 13px 30px;
+      background: #38bdf8;
+      color: #07111f;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: bold;
+    }
+
+    /* SECTION */
     section {
-      max-width: 900px;
-      margin: 30px auto;
-      padding: 0 20px;
+      padding: 90px 8%;
+      text-align: center;
+    }
+
+    .title {
+      font-size: 38px;
+      margin-bottom: 35px;
+      color: #38bdf8;
     }
 
     .card {
-      background: white;
+      max-width: 900px;
+      margin: auto;
+      background: #1e293b;
+      padding: 30px;
+      border-radius: 20px;
+      line-height: 1.8;
+      font-size: 18px;
+    }
+
+    /* STRUKTUR */
+    .struktur {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .struktur-card {
+      background: linear-gradient(135deg, #1e3a5f, #172033);
       padding: 25px;
       border-radius: 18px;
-      margin-bottom: 20px;
-      box-shadow: 0 5px 20px #0001;
+      border: 1px solid #38bdf8;
+      transition: 0.3s;
     }
 
-    h2 {
-      color: #2563eb;
-      margin-bottom: 15px;
+    .struktur-card:hover {
+      transform: translateY(-8px);
     }
 
-    ul {
-      padding-left: 20px;
-      line-height: 2;
+    .jabatan {
+      color: #38bdf8;
+      font-size: 17px;
+      font-weight: bold;
     }
 
+    .nama {
+      font-size: 23px;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    /* ANGGOTA */
     .anggota {
+      max-width: 900px;
+      margin: auto;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
-      gap: 12px;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 15px;
     }
 
-    .siswa {
-      background: #eff6ff;
-      padding: 15px;
+    .anggota div {
+      background: #1e293b;
+      padding: 18px;
       border-radius: 12px;
-      text-align: center;
+    }
+
+    /* GALLERY */
+    .gallery img {
+      width: 100%;
+      max-width: 900px;
+      border-radius: 20px;
+      border: 3px solid #38bdf8;
     }
 
     footer {
-      background: #0f172a;
-      color: white;
+      background: #070b14;
       text-align: center;
       padding: 25px;
-      margin-top: 40px;
+      color: #94a3b8;
+    }
+
+    /* HP */
+    @media (max-width: 700px) {
+
+      nav {
+        padding: 14px;
+      }
+
+      .logo {
+        font-size: 17px;
+      }
+
+      nav ul {
+        gap: 10px;
+        overflow-x: auto;
+      }
+
+      nav ul li a {
+        font-size: 11px;
+      }
+
+      .hero h1 {
+        font-size: 50px;
+      }
+
+      .hero h2 {
+        font-size: 38px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      .title {
+        font-size: 30px;
+      }
     }
   </style>
 </head>
 
 <body>
 
-  <header>
-    <h1>X TSM</h1>
-    <p>SMK PLUS MIFTAHUL IHSAN CILOGRANG</p>
-    <p>✨ Bersama Kita Bisa ✨</p>
-  </header>
+<!-- NAVBAR -->
+<nav>
+  <div class="logo">X TSM</div>
 
-  <nav>
-    <a href="#tentang">Tentang</a>
-    <a href="#anggota">Anggota</a>
-    <a href="#jadwal">Jadwal</a>
-  </nav>
+  <ul>
+    <li><a href="#home">HOME</a></li>
+    <li><a href="#tentang">TENTANG</a></li>
+    <li><a href="#struktur">STRUKTUR</a></li>
+    <li><a href="#anggota">ANGGOTA</a></li>
+    <li><a href="#gallery">GALLERY</a></li>
+  </ul>
+</nav>
 
-  <section id="tentang">
-    <div class="card">
-      <h2>👋 Tentang Kelas</h2>
-      <p>
-        Selamat datang di website resmi kelas X TSM.
-        Website ini dibuat sebagai tempat informasi,
-        dokumentasi, dan kenangan kelas kami.
-      </p>
+
+<!-- HOME -->
+<section class="hero" id="home">
+  <div class="hero-content">
+    <h1>WELCOME TO</h1>
+    <h2>KELAS X TSM</h2>
+
+    <p>
+      Bersama dalam kebersamaan, tumbuh dalam persahabatan,
+      dan menciptakan kenangan yang tak terlupakan.
+    </p>
+
+    <a href="#tentang" class="btn">LIHAT SELENGKAPNYA</a>
+  </div>
+</section>
+
+
+<!-- TENTANG -->
+<section id="tentang">
+  <h2 class="title">👋 Tentang Kelas</h2>
+
+  <div class="card">
+    Selamat datang di website resmi <b>KELAS X TSM</b>.
+    Website ini dibuat sebagai tempat untuk menyimpan informasi,
+    dokumentasi, kegiatan, dan kenangan indah bersama.
+    <br><br>
+    <b>SMK PLUS MIFTAHUL IHSAN CILOGRANG</b>
+  </div>
+</section>
+
+
+<!-- STRUKTUR -->
+<section id="struktur">
+  <h2 class="title">🏫 Struktur Kelas</h2>
+
+  <div class="struktur">
+
+    <div class="struktur-card">
+      <div class="jabatan">WALI KELAS</div>
+      <div class="nama">Faiz Sema Abdullah</div>
     </div>
-  </section>
 
-  <section id="anggota">
-    <div class="card">
-      <h2>👥 Struktur Kelas</h2>
-
-      <div class="anggota">
-        <div class="wali kelas">wali kelas -faiz</div>
-        <div class="ketua kelas">ketua kelas -Riska</div>
-        <div class="wakil ketua kelas">wakil ketua kelas -Abil</div>
-        <div class="sekertaris">sekertaris -Feby</div>
-        <div class="bendahara">bendahara -Rusmawati</div>
-      </div>
-
-      <p style="margin-top:15px;">
-         
-      </p>
+    <div class="struktur-card">
+      <div class="jabatan">KETUA KELAS</div>
+      <div class="nama">Riska</div>
     </div>
-  </section>
 
-  <section id="jadwal">
-    <div class="card">
-      <h2>📚 Jadwal Pelajaran</h2>
-
-      <ul>
-        <li>Senin — Pemrograman</li>
-        <li>Selasa — Bahasa Indonesia</li>
-        <li>Rabu — Matematika</li>
-        <li>Kamis — Bahasa Inggris</li>
-        <li>Jumat — Produktif RPL</li>
-      </ul>
+    <div class="struktur-card">
+      <div class="jabatan">WAKIL KETUA</div>
+      <div class="nama">Abil</div>
     </div>
-  </section>
 
-  <section>
-    <div class="card">
-      <h2>📢 Pengumuman</h2>
-      <p>
-        Selamat datang di website kelas kami!
-        Jangan lupa tetap kompak dan semangat belajar.
-      </p>
+    <div class="struktur-card">
+      <div class="jabatan">SEKRETARIS</div>
+      <div class="nama">Feby</div>
     </div>
-  </section>
 
-  <footer>
-    <p>© 2026 XI RPL</p>
-    <p>SMK PLUS MIFTAHUL IHSAN CILOGRANG</p>
-  </footer>
+    <div class="struktur-card">
+      <div class="jabatan">BENDAHARA</div>
+      <div class="nama">Rusmawati</div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ANGGOTA -->
+<section id="anggota">
+  <h2 class="title">👥 Anggota Kelas</h2>
+
+  <div class="anggota">
+    <div>Siswa 1</div>
+    <div>Siswa 2</div>
+    <div>Siswa 3</div>
+    <div>Siswa 4</div>
+    <div>Siswa 5</div>
+    <div>Siswa 6</div>
+    <div>Siswa 7</div>
+    <div>Siswa 8</div>
+  </div>
+</section>
+
+
+<!-- GALLERY -->
+<section id="gallery">
+  <h2 class="title">📸 Gallery Kelas</h2>
+
+  <div class="gallery">
+    <img src="foto-kelas.jpg" alt="Foto Kelas X TSM">
+  </div>
+</section>
+
+
+<footer>
+  <p>© 2026 KELAS X TSM</p>
+  <p>SMK PLUS MIFTAHUL IHSAN CILOGRANG</p>
+</footer>
 
 </body>
-  </html>
+</html>
