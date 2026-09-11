@@ -3,482 +3,343 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>KELAS X TSM</title>
+<title>KELAS X TSM | SMK PLUS MIFTAHUL IHSAN</title>
 
 <style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    scroll-behavior:smooth;
-}
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@400;500;600;700;800&family=Permanent+Marker&display=swap');
 
+*{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth}
 body{
-    font-family:Arial,sans-serif;
-    background:#061827;
-    color:white;
+  font-family:Poppins,Arial,sans-serif;
+  background:#061b2a;
+  color:#fff;
+  overflow-x:hidden;
 }
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
 
 /* NAVBAR */
 nav{
-    position:fixed;
-    top:0;
-    width:100%;
-    height:75px;
-    padding:0 5%;
-    background:rgba(3,18,30,.88);
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    z-index:1000;
-    border-bottom:1px solid rgba(255,255,255,.25);
-    backdrop-filter:blur(8px);
+  position:fixed;top:0;left:0;width:100%;height:86px;
+  z-index:999;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 5%;
+  background:rgba(3,20,32,.78);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid rgba(255,255,255,.35);
 }
-
-.logo{
-    font-size:30px;
-    font-weight:900;
-    color:white;
-}
-
-nav ul{
-    display:flex;
-    list-style:none;
-    gap:35px;
-}
-
-nav a{
-    color:white;
-    text-decoration:none;
-    font-weight:bold;
-    font-size:16px;
-}
-
-nav a:hover{
-    color:#168cff;
+.logo-wrap{display:flex;align-items:center;gap:12px;font-weight:800;font-size:28px}
+.logo-wrap img{width:48px;height:48px;object-fit:contain;border-radius:50%}
+.logo-text{font-weight:800}
+.logo-text span{color:#159cff}
+nav ul{display:flex;gap:34px;list-style:none;align-items:center}
+nav li a{font-weight:700;font-size:15px;transition:.25s}
+nav li a:hover,nav li a.active{color:#159cff}
+.school{
+  border:1px solid white;border-radius:30px;padding:12px 22px;
+  font-weight:700;font-size:13px;white-space:nowrap;
 }
 
 /* HERO */
 .hero{
-    min-height:100vh;
-    position:relative;
-    display:flex;
-    align-items:center;
-    overflow:hidden;
-
-    background-image:
-    linear-gradient(90deg,
-    rgba(2,18,31,.98) 0%,
-    rgba(2,18,31,.85) 28%,
-    rgba(2,18,31,.25) 55%,
-    rgba(2,18,31,.1) 100%),
-    url("IMG-20260911-WA0055.jpg");
-
-    background-size:cover;
-    background-position:center;
+  min-height:100vh;
+  position:relative;
+  display:flex;align-items:center;
+  padding:120px 6% 70px;
+  background:
+    linear-gradient(90deg,rgba(2,22,36,.96) 0%,rgba(2,22,36,.78) 34%,rgba(2,22,36,.15) 72%,rgba(2,22,36,.3)),
+    url("hero.jpg") center/cover no-repeat;
 }
-
-.hero-content{
-    width:45%;
-    margin-left:6%;
-    z-index:2;
+.hero:after{
+  content:"";position:absolute;left:0;right:0;bottom:-2px;height:95px;
+  background:#061b2a;
+  clip-path:polygon(0 72%,7% 58%,14% 74%,22% 62%,30% 76%,39% 57%,48% 72%,58% 60%,68% 75%,78% 57%,88% 72%,100% 55%,100% 100%,0 100%);
 }
-
-.welcome{
-    font-size:35px;
-    font-style:italic;
-    font-weight:bold;
-    margin-bottom:5px;
-}
-
+.hero-content{max-width:550px;position:relative;z-index:2}
+.script{font-family:"Permanent Marker",cursive;font-size:30px;margin-bottom:8px}
 .hero h1{
-    font-size:90px;
-    line-height:.9;
-    font-weight:900;
-    letter-spacing:-3px;
+  font-family:Anton,Impact,sans-serif;
+  font-size:clamp(75px,10vw,150px);
+  line-height:.86;
+  letter-spacing:2px;
 }
-
-.hero h2{
-    font-size:95px;
-    line-height:1;
-    color:#168cff;
-    font-weight:900;
-    font-style:italic;
+.hero h1 span{color:#159cff}
+.hero p{
+  margin-top:28px;max-width:410px;font-size:17px;font-weight:600;line-height:1.6;
 }
-
-.quote{
-    margin-top:25px;
-    font-size:20px;
-    line-height:1.5;
-    font-weight:bold;
-    max-width:420px;
+.blue-line{width:280px;height:9px;background:#159cff;transform:skew(-25deg) rotate(-4deg);margin-top:18px;border-radius:50%}
+.btn{
+  display:inline-block;margin-top:30px;padding:14px 28px;
+  background:#159cff;color:#031321;border-radius:30px;font-weight:800;
+  box-shadow:0 0 25px rgba(21,156,255,.35);transition:.25s
 }
+.btn:hover{transform:translateY(-3px)}
 
-.garis{
-    width:300px;
-    height:8px;
-    background:#168cff;
-    transform:rotate(-5deg);
-    margin-top:20px;
-    border-radius:50%;
+/* GENERAL */
+section{padding:100px 6%}
+.section-head{text-align:center;margin-bottom:55px}
+.section-head .mini{color:#159cff;font-weight:800;letter-spacing:3px;font-size:13px}
+.section-head h2{font-family:Anton,Impact,sans-serif;font-size:52px;margin-top:5px}
+.section-head p{color:#b7c9d5;margin:12px auto 0;max-width:650px}
+
+/* ABOUT */
+.about{background:linear-gradient(#061b2a,#08253a)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:45px;max-width:1100px;margin:auto;align-items:center}
+.about-card{
+  background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.14);
+  border-radius:24px;padding:35px;line-height:1.8;color:#dce8ef
 }
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin-top:25px}
+.stat{background:#0d3149;border-radius:18px;padding:24px;text-align:center;border:1px solid #145071}
+.stat strong{display:block;font-size:32px;color:#159cff}
+.stat span{font-size:12px;color:#b9cbd6;font-weight:700}
 
-/* SECTION */
-section{
-    padding:90px 6%;
+/* MEDIA */
+.media{background:#061b2a}
+.media-card{
+  max-width:900px;margin:auto;display:grid;grid-template-columns:1fr 1fr;
+  background:#0c2b40;border-radius:25px;overflow:hidden;border:1px solid #174c68
 }
-
-.judul{
-    text-align:center;
-    font-size:45px;
-    margin-bottom:45px;
-    color:#168cff;
-}
-
-/* TENTANG */
-#tentang{
-    text-align:center;
-    background:#071d2d;
-}
-
-.card{
-    max-width:850px;
-    margin:auto;
-    background:rgba(255,255,255,.06);
-    border:1px solid rgba(255,255,255,.15);
-    border-radius:20px;
-    padding:35px;
-    font-size:20px;
-    line-height:1.8;
+.media-info{padding:35px;display:flex;flex-direction:column;justify-content:center}
+.media-info h3{font-size:28px;margin-bottom:10px}
+.media-info p{color:#bdd0db;line-height:1.7}
+.media-placeholder{
+  min-height:280px;display:flex;align-items:center;justify-content:center;
+  background:linear-gradient(135deg,#0c3650,#071e30);
+  font-size:50px
 }
 
 /* STRUKTUR */
-#struktur{
-    background:#041522;
+.structure{background:#061b2a}
+.structure-board{max-width:1150px;margin:auto}
+.structure-row{display:flex;justify-content:center;gap:35px}
+.role{
+  width:220px;min-height:110px;padding:20px;border-radius:18px;text-align:center;
+  background:#0c3550;border:2px solid #159cff;box-shadow:0 0 22px rgba(21,156,255,.2)
 }
-
-.struktur{
-    max-width:1100px;
-    margin:auto;
-    display:grid;
-    grid-template-columns:repeat(5,1fr);
-    gap:20px;
-}
-
-.box{
-    background:linear-gradient(145deg,#06304a,#092035);
-    border:2px solid #168cff;
-    border-radius:18px;
-    padding:25px 15px;
-    text-align:center;
-    box-shadow:0 0 20px rgba(22,140,255,.18);
-    transition:.3s;
-}
-
-.box:hover{
-    transform:translateY(-8px);
-    box-shadow:0 0 30px rgba(22,140,255,.45);
-}
-
-.box small{
-    color:#55b5ff;
-    font-weight:bold;
-    font-size:14px;
-}
-
-.box h3{
-    margin-top:12px;
-    font-size:20px;
-}
+.role.wali{background:#33218c;border-color:#9d86ff;box-shadow:0 0 25px rgba(157,134,255,.25)}
+.role .job{font-size:11px;font-weight:800;color:#8de0ff;letter-spacing:.5px}
+.role h3{font-size:18px;margin-top:8px}
+.connector{height:45px;width:3px;background:#55dfff;margin:auto;box-shadow:0 0 10px #55dfff}
+.connector-wide{height:3px;background:#55dfff;width:52%;margin:auto;box-shadow:0 0 10px #55dfff}
+.bottom .role{background:#a81968;border-color:#ff55ad;box-shadow:0 0 22px rgba(255,85,173,.2)}
+.bottom .role:first-child{background:#168b79;border-color:#52ffe0;box-shadow:0 0 22px rgba(82,255,224,.2)}
 
 /* ANGGOTA */
-#anggota{
-    background:#071d2d;
+.members{background:#08253a}
+.member-stats{display:flex;justify-content:center;gap:15px;margin-bottom:45px}
+.pill{padding:12px 22px;border-radius:30px;background:#0d3550;border:1px solid #1a5a7c;font-weight:700}
+.pill b{color:#159cff}
+.member-grid{max-width:1000px;margin:auto;display:grid;grid-template-columns:repeat(4,1fr);gap:15px}
+.member{
+  background:#0c3047;border:1px solid #174e69;border-radius:17px;padding:22px;text-align:center
 }
-
-.statistik{
-    max-width:800px;
-    margin:auto;
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:20px;
-}
-
-.stat{
-    text-align:center;
-    background:#102c40;
-    padding:35px 15px;
-    border-radius:20px;
-    border:1px solid #168cff;
-}
-
-.stat .angka{
-    font-size:50px;
-    color:#168cff;
-    font-weight:900;
-}
-
-.stat p{
-    margin-top:8px;
-    font-size:18px;
-}
+.avatar{width:65px;height:65px;border-radius:50%;margin:0 auto 12px;background:#124562;display:grid;place-items:center;font-size:25px}
+.member h3{font-size:16px}.member p{font-size:12px;color:#9fb6c4;margin-top:4px}
 
 /* GALLERY */
-#gallery{
-    background:#041522;
-    text-align:center;
+.gallery{background:#061b2a}
+.gallery-grid{max-width:1100px;margin:auto;display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.gallery-item{
+  border-radius:20px;overflow:hidden;border:2px solid #145170;
+  background:#0b2b40;min-height:220px
 }
-
-.gallery img{
-    width:100%;
-    max-width:1100px;
-    border-radius:20px;
-    border:3px solid #168cff;
-    box-shadow:0 0 30px rgba(22,140,255,.25);
-}
+.gallery-item img{width:100%;height:100%;min-height:220px;object-fit:cover;transition:.35s}
+.gallery-item:hover img{transform:scale(1.05)}
+.gallery-item.big{grid-column:span 2}
 
 /* FOOTER */
 footer{
-    padding:30px;
-    text-align:center;
-    background:#020b12;
-    color:#b8c5ce;
-    line-height:1.8;
+  padding:35px 6%;border-top:1px solid rgba(255,255,255,.2);
+  display:flex;justify-content:space-between;align-items:center;
+  background:#03121d;color:#a9bbc6
 }
+footer strong{color:white}
 
-/* HP */
-@media(max-width:700px){
-
-    nav{
-        height:65px;
-        padding:0 15px;
-    }
-
-    .logo{
-        font-size:20px;
-    }
-
-    nav ul{
-        gap:12px;
-        overflow-x:auto;
-    }
-
-    nav a{
-        font-size:10px;
-        white-space:nowrap;
-    }
-
-    .hero{
-        min-height:100vh;
-        background-position:center;
-    }
-
-    .hero-content{
-        width:100%;
-        margin:0;
-        padding:30px;
-        padding-top:100px;
-        text-align:left;
-    }
-
-    .welcome{
-        font-size:24px;
-    }
-
-    .hero h1{
-        font-size:58px;
-    }
-
-    .hero h2{
-        font-size:65px;
-    }
-
-    .quote{
-        font-size:16px;
-        max-width:300px;
-    }
-
-    .garis{
-        width:200px;
-    }
-
-    section{
-        padding:70px 20px;
-    }
-
-    .judul{
-        font-size:32px;
-    }
-
-    .struktur{
-        grid-template-columns:1fr;
-        gap:18px;
-    }
-
-    .statistik{
-        grid-template-columns:1fr;
-    }
-
-    .box{
-        padding:22px;
-    }
+/* MOBILE */
+@media(max-width:800px){
+  nav{height:72px;padding:0 14px}
+  .logo-wrap{font-size:20px;gap:7px}
+  .logo-wrap img{width:36px;height:36px}
+  nav ul{gap:12px;overflow-x:auto;max-width:62%}
+  nav li a{font-size:10px}
+  .school{display:none}
+  .hero{padding:105px 22px 80px;min-height:100svh;background-position:58% center}
+  .hero:after{height:55px}
+  .script{font-size:21px}
+  .hero h1{font-size:70px}
+  .hero p{font-size:14px;max-width:330px}
+  .blue-line{width:190px}
+  section{padding:75px 18px}
+  .section-head{margin-bottom:35px}
+  .section-head h2{font-size:38px}
+  .about-grid,.media-card{grid-template-columns:1fr}
+  .stats{grid-template-columns:repeat(3,1fr)}
+  .stat{padding:16px 8px}.stat strong{font-size:25px}
+  .structure-row{flex-direction:column;align-items:center;gap:15px}
+  .connector-wide{display:none}
+  .role{width:88%}
+  .member-stats{flex-wrap:wrap}
+  .member-grid{grid-template-columns:repeat(2,1fr)}
+  .gallery-grid{grid-template-columns:1fr 1fr}
+  .gallery-item.big{grid-column:span 2}
+  footer{flex-direction:column;gap:10px;text-align:center}
 }
 </style>
 </head>
 
 <body>
 
-<!-- NAVBAR -->
 <nav>
-    <div class="logo">⚙️ X TSM</div>
-
-    <ul>
-        <li><a href="#home">BERANDA</a></li>
-        <li><a href="#tentang">TENTANG</a></li>
-        <li><a href="#anggota">MEDIA</a></li>
-        <li><a href="#struktur">STRUKTUR</a></li>
-        <li><a href="#anggota">ANGGOTA</a></li>
-        <li><a href="#gallery">GALLERY</a></li>
-    </ul>
+  <a href="#home" class="logo-wrap">
+    <img src="logo-tsm.jpg" alt="Logo TSM">
+    <span>X <span>TSM</span></span>
+  </a>
+  <ul>
+    <li><a class="active" href="#home">BERANDA</a></li>
+    <li><a href="#tentang">TENTANG</a></li>
+    <li><a href="#media">MEDIA</a></li>
+    <li><a href="#anggota">ANGGOTA</a></li>
+    <li><a href="#gallery">GALLERY</a></li>
+  </ul>
+  <div class="school">🏫 SMK PLUS MIFTAHUL IHSAN</div>
 </nav>
 
-
-<!-- HOME -->
 <section class="hero" id="home">
-
-    <div class="hero-content">
-
-        <div class="welcome">
-            Selamat Datang di Website
-        </div>
-
-        <h1>KELAS</h1>
-
-        <h2>X TSM</h2>
-
-        <div class="quote">
-            "Bukan hanya tentang belajar,
-            tapi tentang tumbuh bersama
-            meraih masa depan."
-        </div>
-
-        <div class="garis"></div>
-
-    </div>
-
+  <div class="hero-content">
+    <div class="script">Selamat Datang di Website</div>
+    <h1>KELAS<br><span>X TSM</span></h1>
+    <p>"Bukan hanya tentang belajar, tapi tentang tumbuh bersama meraih masa depan."</p>
+    <div class="blue-line"></div>
+    <a class="btn" href="#tentang">JELAJAHI KELAS ↓</a>
+  </div>
 </section>
 
-
-<!-- TENTANG -->
-<section id="tentang">
-
-    <h2 class="judul">Tentang Kelas</h2>
-
-    <div class="card">
-        Selamat datang di website resmi
-        <b>KELAS X TSM</b>.
-
-        <br><br>
-
-        Bersama dalam satu kelas,
-        berbeda dalam karakter,
-        satu tujuan, sukses bersama.
-
-        <br><br>
-
-        <b>SMK PLUS MIFTAHUL IHSAN CILOGRANG</b>
+<section class="about" id="tentang">
+  <div class="section-head">
+    <div class="mini">TENTANG KAMI</div>
+    <h2>KELAS X TSM</h2>
+    <p>Bersama dalam satu kelas, berbeda dalam karakter, satu tujuan, sukses bersama.</p>
+  </div>
+  <div class="about-grid">
+    <div class="about-card">
+      <p>
+        Selamat datang di website resmi <b>KELAS X TSM</b> SMK PLUS MIFTAHUL IHSAN CILOGRANG.
+        Website ini menjadi tempat untuk menyimpan informasi, dokumentasi, kegiatan,
+        dan kenangan kami selama belajar bersama.
+      </p>
     </div>
-
+    <div>
+      <div class="stats">
+        <div class="stat"><strong>60</strong><span>STUDENTS</span></div>
+        <div class="stat"><strong>57</strong><span>MEN</span></div>
+        <div class="stat"><strong>3</strong><span>WOMEN</span></div>
+      </div>
+    </div>
+  </div>
 </section>
 
-
-<!-- STRUKTUR -->
-<section id="struktur">
-
-    <h2 class="judul">Struktur Kelas X TSM</h2>
-
-    <div class="struktur">
-
-        <div class="box">
-            <small>WALI KELAS</small>
-            <h3>Faiz Sema Abdullah</h3>
-        </div>
-
-        <div class="box">
-            <small>KETUA KELAS</small>
-            <h3>Riska Rahayu</h3>
-        </div>
-
-        <div class="box">
-            <small>WAKIL KETUA KELAS</small>
-            <h3>Abil Ardiansah</h3>
-        </div>
-
-        <div class="box">
-            <small>SEKRETARIS</small>
-            <h3>Feby</h3>
-        </div>
-
-        <div class="box">
-            <small>BENDAHARA</small>
-            <h3>Rusmawati</h3>
-        </div>
-
+<section class="media" id="media">
+  <div class="section-head">
+    <div class="mini">MEDIA</div>
+    <h2>MEDIA SOSIAL</h2>
+    <p>Akun media sosial kelas akan ditambahkan nanti.</p>
+  </div>
+  <div class="media-card">
+    <div class="media-placeholder">📱</div>
+    <div class="media-info">
+      <h3>Ikuti Perjalanan X TSM</h3>
+      <p>
+        Bagian media sosial sengaja disiapkan dulu. Nanti username dan link
+        Instagram, TikTok, atau media lainnya bisa langsung dimasukkan di sini.
+      </p>
+      <span class="btn" style="width:max-content;opacity:.65;cursor:default">SEGERA HADIR</span>
     </div>
-
+  </div>
 </section>
 
+<section class="structure" id="struktur">
+  <div class="section-head">
+    <div class="mini">ORGANISASI KELAS</div>
+    <h2>STRUKTUR KELAS</h2>
+  </div>
 
-<!-- ANGGOTA -->
-<section id="anggota">
-
-    <h2 class="judul">👥 Anggota Kelas</h2>
-
-    <div class="statistik">
-
-        <div class="stat">
-            <div class="angka">60</div>
-            <p>Total Siswa</p>
-        </div>
-
-        <div class="stat">
-            <div class="angka">57</div>
-            <p>👦 Laki-laki</p>
-        </div>
-
-        <div class="stat">
-            <div class="angka">3</div>
-            <p>👧 Perempuan</p>
-        </div>
-
+  <div class="structure-board">
+    <div class="structure-row">
+      <div class="role wali">
+        <div class="job">WALI KELAS</div>
+        <h3>Faiz Sema Abdullah</h3>
+      </div>
     </div>
 
-</section>
+    <div class="connector"></div>
+    <div class="connector-wide"></div>
 
-
-<!-- GALLERY -->
-<section id="gallery">
-
-    <h2 class="judul">📸 Gallery Kelas</h2>
-
-    <div class="gallery">
-        <img src="IMG-20260911-WA0055.jpg"
-             alt="Foto Kelas X TSM">
+    <div class="structure-row" style="margin-top:0">
+      <div class="role">
+        <div class="job">KETUA KELAS</div>
+        <h3>Riska Rahayu</h3>
+      </div>
+      <div class="role">
+        <div class="job">WAKIL KETUA KELAS</div>
+        <h3>Abil Ardiansah</h3>
+      </div>
     </div>
 
+    <div class="connector"></div>
+    <div class="connector-wide"></div>
+
+    <div class="structure-row bottom" style="margin-top:0">
+      <div class="role">
+        <div class="job">SEKRETARIS</div>
+        <h3>Feby</h3>
+      </div>
+      <div class="role">
+        <div class="job">BENDAHARA</div>
+        <h3>Rusmawati</h3>
+      </div>
+    </div>
+  </div>
 </section>
 
+<section class="members" id="anggota">
+  <div class="section-head">
+    <div class="mini">KELUARGA KELAS</div>
+    <h2>ANGGOTA KELAS</h2>
+    <p>Jumlah siswa X TSM saat ini.</p>
+  </div>
 
-<!-- FOOTER -->
+  <div class="member-stats">
+    <div class="pill">👥 <b>60</b> Students</div>
+    <div class="pill">👨 <b>57</b> Men</div>
+    <div class="pill">👩 <b>3</b> Women</div>
+  </div>
+
+  <div class="member-grid">
+    <div class="member"><div class="avatar">👨</div><h3>Siswa X TSM</h3><p>57 Siswa Laki-laki</p></div>
+    <div class="member"><div class="avatar">👩</div><h3>Siswi X TSM</h3><p>3 Siswa Perempuan</p></div>
+    <div class="member"><div class="avatar">🎓</div><h3>Keluarga X TSM</h3><p>Total 60 Siswa</p></div>
+    <div class="member"><div class="avatar">⚙️</div><h3>Teknik Sepeda Motor</h3><p>X TSM</p></div>
+  </div>
+</section>
+
+<section class="gallery" id="gallery">
+  <div class="section-head">
+    <div class="mini">DOKUMENTASI</div>
+    <h2>GALLERY KELAS</h2>
+    <p>Satu foto dulu. Foto berikutnya bisa ditambahkan kapan saja.</p>
+  </div>
+
+  <div class="gallery-grid">
+    <div class="gallery-item big">
+      <img src="gallery-1.jpg" alt="Kegiatan Kelas X TSM">
+    </div>
+  </div>
+</section>
+
 <footer>
-
-    <p>© 2026 KELAS X TSM</p>
-
-    <p>SMK PLUS MIFTAHUL IHSAN CILOGRANG</p>
-
-    <p>Solid • Kompak • Berprestasi</p>
-
+  <div><strong>⚙️ X TSM</strong> · SMK PLUS MIFTAHUL IHSAN CILOGRANG</div>
+  <div>Solid · Kompak · Berprestasi</div>
 </footer>
 
 </body>
