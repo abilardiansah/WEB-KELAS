@@ -20,7 +20,7 @@
       color: white;
     }
 
-    /* NAVBAR */
+    /* ================= NAVBAR ================= */
     nav {
       position: fixed;
       top: 0;
@@ -57,7 +57,7 @@
       color: #38bdf8;
     }
 
-    /* HERO */
+    /* ================= HERO ================= */
     .hero {
       min-height: 100vh;
       display: flex;
@@ -66,17 +66,21 @@
       text-align: center;
       position: relative;
 
-      /* FOTO KELAS */
       background:
-        linear-gradient(rgba(5,10,25,0.45), rgba(5,10,25,0.75)),
-        url("IMG-20260911-WA0055.jpg");
+        linear-gradient(
+          rgba(5,10,25,0.45),
+          rgba(5,10,25,0.75)
+        ),
+        url("file_00000000473c81fd8001d733ec25f2d0.png");
 
       background-size: cover;
       background-position: center;
+      background-repeat: no-repeat;
     }
 
     .hero-content {
       padding: 20px;
+      max-width: 900px;
     }
 
     .hero h1 {
@@ -111,7 +115,7 @@
       font-weight: bold;
     }
 
-    /* SECTION */
+    /* ================= SECTION ================= */
     section {
       padding: 90px 8%;
       text-align: center;
@@ -133,40 +137,107 @@
       font-size: 18px;
     }
 
-    /* STRUKTUR */
+    /* ================= STRUKTUR ================= */
+    .struktur-section {
+      min-height: 100vh;
+      background: #101827;
+      padding-top: 100px;
+    }
+
     .struktur {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
       max-width: 1000px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .box {
+      display: inline-block;
+      padding: 20px 30px;
+      border-radius: 15px;
+      color: white;
+      min-width: 240px;
+      border: 2px solid #55eaff;
+      box-shadow: 0 0 20px #55eaff;
+    }
+
+    .box small {
+      display: block;
+      font-size: 11px;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+
+    .box h3 {
+      font-size: 18px;
+      margin: 0;
+    }
+
+    /* WALI */
+    .wali {
+      background: #5130d9;
+      border-color: #9b7cff;
+      box-shadow: 0 0 20px #8c6cff;
+    }
+
+    /* GARIS */
+    .line {
+      background: #62ffff;
+      box-shadow: 0 0 10px #62ffff;
+    }
+
+    .vertical {
+      width: 3px;
+      height: 40px;
       margin: auto;
     }
 
-    .struktur-card {
-      background: linear-gradient(135deg, #1e3a5f, #172033);
-      padding: 25px;
-      border-radius: 18px;
-      border: 1px solid #38bdf8;
-      transition: 0.3s;
+    .horizontal {
+      width: 55%;
+      height: 3px;
+      margin: auto;
     }
 
-    .struktur-card:hover {
-      transform: translateY(-8px);
+    /* KETUA WAKIL */
+    .atas {
+      display: flex;
+      justify-content: center;
+      gap: 50px;
+      margin-top: 0;
+      position: relative;
     }
 
-    .jabatan {
-      color: #38bdf8;
-      font-size: 17px;
-      font-weight: bold;
+    .atas .box {
+      background: #168fc4;
+      border-color: #55eaff;
+      box-shadow: 0 0 20px #55eaff;
     }
 
-    .nama {
-      font-size: 23px;
-      margin-top: 10px;
-      font-weight: bold;
+    /* GARIS KE BAWAH */
+    .bawah-line {
+      width: 70%;
     }
 
-    /* ANGGOTA */
+    /* SEKRETARIS BENDAHARA */
+    .bawah {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin-top: 0;
+    }
+
+    .bawah .box {
+      background: #c51b73;
+      border-color: #ff4da8;
+      box-shadow: 0 0 20px #ff4da8;
+    }
+
+    .bawah .box:first-child {
+      background: #249e88;
+      border-color: #5effdf;
+      box-shadow: 0 0 20px #5effdf;
+    }
+
+    /* ================= ANGGOTA ================= */
     .anggota {
       max-width: 900px;
       margin: auto;
@@ -181,7 +252,7 @@
       border-radius: 12px;
     }
 
-    /* GALLERY */
+    /* ================= GALLERY ================= */
     .gallery img {
       width: 100%;
       max-width: 900px;
@@ -189,6 +260,7 @@
       border: 3px solid #38bdf8;
     }
 
+    /* ================= FOOTER ================= */
     footer {
       background: #070b14;
       text-align: center;
@@ -196,11 +268,11 @@
       color: #94a3b8;
     }
 
-    /* HP */
+    /* ================= HP ================= */
     @media (max-width: 700px) {
 
       nav {
-        padding: 14px;
+        padding: 14px 10px;
       }
 
       .logo {
@@ -217,19 +289,41 @@
       }
 
       .hero h1 {
-        font-size: 50px;
+        font-size: 42px;
       }
 
       .hero h2 {
-        font-size: 38px;
+        font-size: 32px;
       }
 
       .hero p {
-        font-size: 16px;
+        font-size: 15px;
       }
 
       .title {
         font-size: 30px;
+      }
+
+      .atas,
+      .bawah {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+      }
+
+      .atas .box,
+      .bawah .box,
+      .wali {
+        width: 85%;
+        min-width: unset;
+      }
+
+      .horizontal {
+        width: 70%;
+      }
+
+      .bawah-line {
+        width: 70%;
       }
     }
   </style>
@@ -237,7 +331,7 @@
 
 <body>
 
-<!-- NAVBAR -->
+<!-- ================= NAVBAR ================= -->
 <nav>
   <div class="logo">X TSM</div>
 
@@ -251,10 +345,13 @@
 </nav>
 
 
-<!-- HOME -->
+<!-- ================= HOME ================= -->
 <section class="hero" id="home">
+
   <div class="hero-content">
+
     <h1>WELCOME TO</h1>
+
     <h2>KELAS X TSM</h2>
 
     <p>
@@ -262,80 +359,135 @@
       dan menciptakan kenangan yang tak terlupakan.
     </p>
 
-    <a href="#tentang" class="btn">LIHAT SELENGKAPNYA</a>
+    <a href="#tentang" class="btn">
+      LIHAT SELENGKAPNYA
+    </a>
+
   </div>
+
 </section>
 
 
-<!-- TENTANG -->
+<!-- ================= TENTANG ================= -->
 <section id="tentang">
+
   <h2 class="title">👋 Tentang Kelas</h2>
 
   <div class="card">
-    Selamat datang di website resmi <b>KELAS X TSM</b>.
+
+    Selamat datang di website resmi
+    <b>KELAS X TSM</b>.
+
     Website ini dibuat sebagai tempat untuk menyimpan informasi,
     dokumentasi, kegiatan, dan kenangan indah bersama.
+
     <br><br>
+
     <b>SMK PLUS MIFTAHUL IHSAN CILOGRANG</b>
+
   </div>
+
 </section>
 
 
+<!-- ================= STRUKTUR ================= -->
 <section id="struktur" class="struktur-section">
 
-    <h2 class="title">STRUKTUR KELAS</h2>
+  <h2 class="title">STRUKTUR KELAS</h2>
 
-    <div class="struktur">
+  <div class="struktur">
 
-        <div class="box wali">
-            <small>WALI KELAS</small>
-            <h3>Faiz Sema Abdullah</h3>
-        </div>
+    <!-- WALI KELAS -->
+    <div class="box wali">
 
-        <div class="line vertical"></div>
-        <div class="line horizontal"></div>
+      <small>WALI KELAS</small>
 
-        <div class="row atas">
-
-            <div class="box ketua">
-                <small>KETUA KELAS</small>
-                <h3>Riska Rahayu</h3>
-            </div>
-
-            <div class="box wakil">
-                <small>WAKIL KETUA</small>
-                <h3>Abil Ardiansah</h3>
-            </div>
-
-        </div>
-
-        <div class="line vertical bawah"></div>
-        <div class="line horizontal bawah-line"></div>
-
-        <div class="row bawah">
-
-            <div class="box sekretaris">
-                <small>SEKRETARIS</small>
-                <h3>Febi</h3>
-            </div>
-
-            <div class="box bendahara">
-                <small>BENDAHARA</small>
-                <h3>Rusmawati</h3>
-            </div>
-
-        </div>
+      <h3>
+        Faiz Sema Abdullah
+      </h3>
 
     </div>
 
+
+    <!-- GARIS -->
+    <div class="line vertical"></div>
+
+    <div class="line horizontal"></div>
+
+
+    <!-- KETUA & WAKIL -->
+    <div class="row atas">
+
+      <div class="box">
+
+        <small>KETUA KELAS</small>
+
+        <h3>
+          Riska Rahayu
+        </h3>
+
+      </div>
+
+
+      <div class="box">
+
+        <small>WAKIL KETUA</small>
+
+        <h3>
+          Abil Ardiansah
+        </h3>
+
+      </div>
+
+    </div>
+
+
+    <!-- GARIS -->
+    <div class="line vertical"></div>
+
+    <div class="line horizontal bawah-line"></div>
+
+
+    <!-- SEKRETARIS & BENDAHARA -->
+    <div class="row bawah">
+
+      <div class="box">
+
+        <small>SEKRETARIS</small>
+
+        <h3>
+          Febi
+        </h3>
+
+      </div>
+
+
+      <div class="box">
+
+        <small>BENDAHARA</small>
+
+        <h3>
+          Rusmawati
+        </h3>
+
+      </div>
+
+    </div>
+
+  </div>
+
 </section>
 
 
-<!-- ANGGOTA -->
+<!-- ================= ANGGOTA ================= -->
 <section id="anggota">
-  <h2 class="title">👥 Anggota Kelas</h2>
+
+  <h2 class="title">
+    👥 Anggota Kelas
+  </h2>
 
   <div class="anggota">
+
     <div>Siswa 1</div>
     <div>Siswa 2</div>
     <div>Siswa 3</div>
@@ -344,22 +496,42 @@
     <div>Siswa 6</div>
     <div>Siswa 7</div>
     <div>Siswa 8</div>
+
   </div>
+
 </section>
 
 
-<!-- GALLERY -->
+<!-- ================= GALLERY ================= -->
 <section id="gallery">
-  <h2 class="title">📸 Gallery Kelas</h2>
+
+  <h2 class="title">
+    📸 Gallery Kelas
+  </h2>
 
   <div class="gallery">
-<img src="file_00000000473c81fd8001d733ec25f2d0.png" alt="Foto Kelas X TSM">
+
+    <img
+      src="file_00000000473c81fd8001d733ec25f2d0.png"
+      alt="Foto Kelas X TSM"
+    >
+
+  </div>
+
 </section>
 
 
+<!-- ================= FOOTER ================= -->
 <footer>
-  <p>© 2026 KELAS X TSM</p>
-  <p>SMK PLUS MIFTAHUL IHSAN CILOGRANG</p>
+
+  <p>
+    © 2026 KELAS X TSM
+  </p>
+
+  <p>
+    SMK PLUS MIFTAHUL IHSAN CILOGRANG
+  </p>
+
 </footer>
 
 </body>
