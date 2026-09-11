@@ -131,4 +131,355 @@ section{
 
 .judul{
     text-align:center;
-    font-size:45
+    font-size:45px;
+    margin-bottom:45px;
+    color:#168cff;
+}
+
+/* TENTANG */
+#tentang{
+    text-align:center;
+    background:#071d2d;
+}
+
+.card{
+    max-width:850px;
+    margin:auto;
+    background:rgba(255,255,255,.06);
+    border:1px solid rgba(255,255,255,.15);
+    border-radius:20px;
+    padding:35px;
+    font-size:20px;
+    line-height:1.8;
+}
+
+/* STRUKTUR */
+#struktur{
+    background:#041522;
+}
+
+.struktur{
+    max-width:1100px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:20px;
+}
+
+.box{
+    background:linear-gradient(145deg,#06304a,#092035);
+    border:2px solid #168cff;
+    border-radius:18px;
+    padding:25px 15px;
+    text-align:center;
+    box-shadow:0 0 20px rgba(22,140,255,.18);
+    transition:.3s;
+}
+
+.box:hover{
+    transform:translateY(-8px);
+    box-shadow:0 0 30px rgba(22,140,255,.45);
+}
+
+.box small{
+    color:#55b5ff;
+    font-weight:bold;
+    font-size:14px;
+}
+
+.box h3{
+    margin-top:12px;
+    font-size:20px;
+}
+
+/* ANGGOTA */
+#anggota{
+    background:#071d2d;
+}
+
+.statistik{
+    max-width:800px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.stat{
+    text-align:center;
+    background:#102c40;
+    padding:35px 15px;
+    border-radius:20px;
+    border:1px solid #168cff;
+}
+
+.stat .angka{
+    font-size:50px;
+    color:#168cff;
+    font-weight:900;
+}
+
+.stat p{
+    margin-top:8px;
+    font-size:18px;
+}
+
+/* GALLERY */
+#gallery{
+    background:#041522;
+    text-align:center;
+}
+
+.gallery img{
+    width:100%;
+    max-width:1100px;
+    border-radius:20px;
+    border:3px solid #168cff;
+    box-shadow:0 0 30px rgba(22,140,255,.25);
+}
+
+/* FOOTER */
+footer{
+    padding:30px;
+    text-align:center;
+    background:#020b12;
+    color:#b8c5ce;
+    line-height:1.8;
+}
+
+/* HP */
+@media(max-width:700px){
+
+    nav{
+        height:65px;
+        padding:0 15px;
+    }
+
+    .logo{
+        font-size:20px;
+    }
+
+    nav ul{
+        gap:12px;
+        overflow-x:auto;
+    }
+
+    nav a{
+        font-size:10px;
+        white-space:nowrap;
+    }
+
+    .hero{
+        min-height:100vh;
+        background-position:center;
+    }
+
+    .hero-content{
+        width:100%;
+        margin:0;
+        padding:30px;
+        padding-top:100px;
+        text-align:left;
+    }
+
+    .welcome{
+        font-size:24px;
+    }
+
+    .hero h1{
+        font-size:58px;
+    }
+
+    .hero h2{
+        font-size:65px;
+    }
+
+    .quote{
+        font-size:16px;
+        max-width:300px;
+    }
+
+    .garis{
+        width:200px;
+    }
+
+    section{
+        padding:70px 20px;
+    }
+
+    .judul{
+        font-size:32px;
+    }
+
+    .struktur{
+        grid-template-columns:1fr;
+        gap:18px;
+    }
+
+    .statistik{
+        grid-template-columns:1fr;
+    }
+
+    .box{
+        padding:22px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+    <div class="logo">⚙️ X TSM</div>
+
+    <ul>
+        <li><a href="#home">BERANDA</a></li>
+        <li><a href="#tentang">TENTANG</a></li>
+        <li><a href="#anggota">MEDIA</a></li>
+        <li><a href="#struktur">STRUKTUR</a></li>
+        <li><a href="#anggota">ANGGOTA</a></li>
+        <li><a href="#gallery">GALLERY</a></li>
+    </ul>
+</nav>
+
+
+<!-- HOME -->
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <div class="welcome">
+            Selamat Datang di Website
+        </div>
+
+        <h1>KELAS</h1>
+
+        <h2>X TSM</h2>
+
+        <div class="quote">
+            "Bukan hanya tentang belajar,
+            tapi tentang tumbuh bersama
+            meraih masa depan."
+        </div>
+
+        <div class="garis"></div>
+
+    </div>
+
+</section>
+
+
+<!-- TENTANG -->
+<section id="tentang">
+
+    <h2 class="judul">Tentang Kelas</h2>
+
+    <div class="card">
+        Selamat datang di website resmi
+        <b>KELAS X TSM</b>.
+
+        <br><br>
+
+        Bersama dalam satu kelas,
+        berbeda dalam karakter,
+        satu tujuan, sukses bersama.
+
+        <br><br>
+
+        <b>SMK PLUS MIFTAHUL IHSAN CILOGRANG</b>
+    </div>
+
+</section>
+
+
+<!-- STRUKTUR -->
+<section id="struktur">
+
+    <h2 class="judul">Struktur Kelas X TSM</h2>
+
+    <div class="struktur">
+
+        <div class="box">
+            <small>WALI KELAS</small>
+            <h3>Faiz Sema Abdullah</h3>
+        </div>
+
+        <div class="box">
+            <small>KETUA KELAS</small>
+            <h3>Riska Rahayu</h3>
+        </div>
+
+        <div class="box">
+            <small>WAKIL KETUA KELAS</small>
+            <h3>Abil Ardiansah</h3>
+        </div>
+
+        <div class="box">
+            <small>SEKRETARIS</small>
+            <h3>Feby</h3>
+        </div>
+
+        <div class="box">
+            <small>BENDAHARA</small>
+            <h3>Rusmawati</h3>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ANGGOTA -->
+<section id="anggota">
+
+    <h2 class="judul">👥 Anggota Kelas</h2>
+
+    <div class="statistik">
+
+        <div class="stat">
+            <div class="angka">60</div>
+            <p>Total Siswa</p>
+        </div>
+
+        <div class="stat">
+            <div class="angka">57</div>
+            <p>👦 Laki-laki</p>
+        </div>
+
+        <div class="stat">
+            <div class="angka">3</div>
+            <p>👧 Perempuan</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- GALLERY -->
+<section id="gallery">
+
+    <h2 class="judul">📸 Gallery Kelas</h2>
+
+    <div class="gallery">
+        <img src="IMG-20260911-WA0055.jpg"
+             alt="Foto Kelas X TSM">
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+
+    <p>© 2026 KELAS X TSM</p>
+
+    <p>SMK PLUS MIFTAHUL IHSAN CILOGRANG</p>
+
+    <p>Solid • Kompak • Berprestasi</p>
+
+</footer>
+
+</body>
+</html>
